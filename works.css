@@ -1,0 +1,122 @@
+/* バナーセクション全体 */
+#banner-gallery {
+  background-color: #fdeff2;
+  padding: 80px 30px;
+}
+
+/* バナーセクションの見出し（会社名風に統一） */
+.company-block h2,
+#banner-gallery h2 {
+  text-align: center;
+  color: #888;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+/* セクションラベル（VlogやDesignなど） */
+.section-label {
+  font-size: 1rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+/* 各会社セクションの余白 */
+.company-block {
+  padding-top: 80px;
+}
+
+/* バナーのグリッド配置 */
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* バナーのカードスタイル */
+.banner-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.banner-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* 動画グリッド配置 */
+.vlog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* 動画カードのサイズと中央揃え */
+.vlog-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* iframeのサイズ統一と装飾 */
+.vlog-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 動画タイトルのスタイル */
+.vlog-card h3 {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.more-link {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.more-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #888;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.more-link a:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 600px) {
+  .banner-grid,
+  .vlog-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vlog-card {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .company-block h2,
+  #banner-gallery h2 {
+    font-size: 1.4rem;
+  }
+}
